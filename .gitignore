@@ -1,0 +1,9 @@
+*.csv
+*.xls
+*.DS_Store
+data/metadata/Metadata - Train Service Passenger Counts.docx
+*.dbf
+*.prj
+*.shp
+*.shx
+*.cpg
