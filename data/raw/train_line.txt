@@ -99,13 +99,6 @@ Flagstaff
 Southern Cross
 Flinders Street
 
-Flemington
-Flemington Racecourse
-Showgrounds
-North Melbourne
-Southern Cross
-Flinders Street
-
 Frankston
 Kananook
 Seaford
@@ -121,6 +114,29 @@ Cheltenham
 Southland
 Highett
 Moorabbin
+Patterson
+Bentleigh
+McKinnon
+Ormond
+Glen Huntly
+Caulfield
+Malvern
+Armadale
+Toorak
+Hawksburn
+South Yarra
+Richmond
+Parliament
+Melbourne Central
+Flagstaff
+Southern Cross
+Flinders Street
+
+Flemington Racecourse
+Showgrounds
+North Melbourne
+Southern Cross
+Flinders Street
 
 Glen Waverley
 Syndal
