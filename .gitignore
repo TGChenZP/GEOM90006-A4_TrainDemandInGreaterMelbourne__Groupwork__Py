@@ -9,3 +9,4 @@ data/metadata/Metadata - Train Service Passenger Counts.docx
 *.cpg
 *.gpkg
 data/raw/Metro Stops/PTV/ptv_metro_train_station_column_names.txt
+*.xml
