@@ -1,0 +1,11 @@
+*.csv
+*.xls
+*.DS_Store
+data/metadata/Metadata - Train Service Passenger Counts.docx
+*.dbf
+*.prj
+*.shp
+*.shx
+*.cpg
+*.gpkg
+data/raw/Metro Stops/PTV/ptv_metro_train_station_column_names.txt
