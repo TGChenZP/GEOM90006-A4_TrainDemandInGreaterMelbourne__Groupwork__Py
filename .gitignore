@@ -10,3 +10,7 @@ data/metadata/Metadata - Train Service Passenger Counts.docx
 *.gpkg
 data/raw/Metro Stops/PTV/ptv_metro_train_station_column_names.txt
 *.xml
+data/raw/features/POPULATION_2023_SA2_GDA2020/AboutGeoPackageGDA2020_readme.txt
+data/raw/features/POPULATION_2023_SA2_GDA2020/CreativeCommons_Licensing_readme.txt
+*.xlsx
+data/raw/features/non-residential_facilities/shopping_centre.json
