@@ -17,4 +17,4 @@ Raw data downloaded using web scraping or from website
 ### Notebooks
 - `DataScraping.ipynb`: Scrape non-residential facilities from websites 
 - `proposal_map.ipynb`: Script for output map in proposal
-- `preprocessing_xxxxx`: Preprocessing files (unify crs, geographical aggregation, clean unuseful attributes), output are stored in `output/preprocessing` folder.
+- `preprocessing_xxxxx`: Preprocessing files (unify crs, geographical daggregation, clean unuseful attributes), output are stored in `output/preprocessing` folder.
