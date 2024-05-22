@@ -48,7 +48,7 @@ class GraphRegressionModel(object):
         mark = ' ' + mark if mark else mark
         self.model.load_state_dict(torch.load(os.path.join(self.configs.rootpath, f'state/{self}{mark}.pt'), map_location=self.device))
     
-    def fit(self, total_train_X_spatial, total_train_X_nonspatial, total_train_y, total_val_X_spatial, total_val_X_nonspatial, total_val_y, graph):
+    def fit(self, total_train_X_spatial, total_train_X_nonspatial, total_train_y, train_masks, total_val_X_spatial, total_val_X_nonspatial, total_val_y, val_masks, graph):
         
         # we didn't use DataSet and DataLoader, instead just a list to control replicability.
         # thus, need to deepcopy to prevent messing up the original data
@@ -91,9 +91,10 @@ class GraphRegressionModel(object):
             for mini_batch_number in tqdm():
  
                 # make this mini batch into a tensor, and move to GPU
-                geospatial_X, non_geospatial_X, y = torch.FloatTensor(total_train_X_spatial[mini_batch_number]).to(self.device), \
+                geospatial_X, non_geospatial_X, y, mask = torch.FloatTensor(total_train_X_spatial[mini_batch_number]).to(self.device), \
                             torch.FloatTensor(total_train_X_nonspatial[mini_batch_number]).to(self.device), \
-                            torch.FloatTensor(total_train_y[mini_batch_number]).to(self.device)
+                            torch.FloatTensor(total_train_y[mini_batch_number]).to(self.device), \
+                            torch.BoolTensor(train_masks[mini_batch_number]).to(self.device)
                 
 
                 # edge case of last mini batch containing no data since we use //
@@ -103,7 +104,7 @@ class GraphRegressionModel(object):
                 # zero the gradients
                 self.optimizer.zero_grad()
 
-                pred, true = self.model(geospatial_X, non_geospatial_X, GRAPH), y 
+                pred, true = self.model(geospatial_X[mask], non_geospatial_X[mask], GRAPH[mask][:, mask]), y[mask]
 
                 # calculate loss
                 loss = self.criterion(pred, true)
@@ -136,7 +137,7 @@ class GraphRegressionModel(object):
 
             # Validation
                 # get the validation results
-            valid_loss, valid_r2 = self.eval(total_val_X_spatial, total_val_X_nonspatial, total_val_y, graph, epoch)
+            valid_loss, valid_r2 = self.eval(total_val_X_spatial, total_val_X_nonspatial, total_val_y, val_masks, graph, epoch)
                 # previously set to eval, now change back to train
             self.model.train()
 
@@ -154,7 +155,7 @@ class GraphRegressionModel(object):
 
         return best_epoch
 
-    def predict(self, future_X_spatial, future_X_geospatial, graph):
+    def predict(self, future_X_spatial, future_X_geospatial, future_masks, graph):
         self.model.eval()
 
         pred_y = []
@@ -166,23 +167,24 @@ class GraphRegressionModel(object):
             for mini_batch_number in tqdm():
  
                 # make this mini batch into a tensor, and move to GPU
-                geospatial_X, non_geospatial_X = torch.FloatTensor(future_X_spatial[mini_batch_number]).to(self.device), \
+                geospatial_X, non_geospatial_X, mask = torch.FloatTensor(future_X_spatial[mini_batch_number]).to(self.device), \
                             torch.FloatTensor(future_X_geospatial[mini_batch_number]).to(self.device), \
+                            torch.BoolTensor(future_masks[mini_batch_number]).to(self.device)
 
                 if len(geospatial_X) == 0:
                     break
 
-                pred = self.model(geospatial_X, non_geospatial_X, GRAPH),
+                pred = self.model(geospatial_X[mask], non_geospatial_X[mask], GRAPH[mask][:, mask])
 
                 pred_y.extend(pred.detach().cpu().tolist())
     
         return pred_y
         
 
-    def eval(self, total_val_X_spatial, total_val_X_nonspatial, total_val_y, graph, epoch, evaluation_mode = False):
+    def eval(self, total_val_X_spatial, total_val_X_nonspatial, total_val_y, val_masks, graph, epoch, evaluation_mode = False):
         
         # get the prediction
-        pred_val_y = self.predict(total_val_X_spatial, total_val_X_nonspatial, graph)
+        pred_val_y = self.predict(total_val_X_spatial, total_val_X_nonspatial, val_masks, graph)
 
         val_y = np.array(total_val_y)
 
