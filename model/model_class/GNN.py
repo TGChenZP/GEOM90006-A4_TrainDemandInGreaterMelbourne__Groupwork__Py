@@ -14,23 +14,23 @@ class GNN(GraphRegressionModel):
             self.input = GraphInputLayer(self.CFG)
             
             # gcn/agcn
-            if self.attention_heads == 0:
-                self.gcn = self.gcn = nn.Sequential(*[
+            if self.CFG.n_heads == 0:
+                self.gcn  = nn.Sequential(*[
                                             nn.Sequential(
                                                 GCN(self.CFG), 
                                                 nn.Dropout(),
                                                 nn.ReLU()
                                             )
-                                            for _ in range(self.CFG.n_layers)
+                                            for _ in range(self.CFG.n_gnn_layers)
                                         ])
             else:
-                self.gcn = self.gcn = nn.Sequential(*[
+                self.gcn  = nn.Sequential(*[
                                             nn.Sequential(
                                                 A_GCN(self.CFG), 
                                                 nn.Dropout(),
                                                 nn.ReLU()
                                             )
-                                            for _ in range(self.CFG.n_layers)])
+                                            for _ in range(self.CFG.n_gnn_layers)])
             
             
             self.linear = GraphOutputLayer(self.CFG)
@@ -58,7 +58,7 @@ class GCN(nn.Module):
         self.CFG = CFG
     
         torch.manual_seed(self.CFG.random_state)
-        self.gcn = nn.Linear(self.CFG.hidden_dim, self.CFG.hidden_dim, bias = True)
+        self.gcn = nn.Linear(self.CFG.d_model, self.CFG.d_model, bias = True)
 
     def forward(self, x, graph):
         return self.gcn(graph @ x)
@@ -72,21 +72,21 @@ class A_GCN(nn.Module): # TODO: double check with attention is all you need
     
         torch.manual_seed(self.CFG.random_state)
 
-        self.dim_per_head = self.CFG.hidden_dim // self.CFG.attention_heads
+        self.dim_per_head = self.CFG.d_model // self.CFG.n_heads
 
-        self.QLinear = nn.Linear(self.CFG.hidden_dim, self.CFG.hidden_dim, bias = False)
-        self.KLinear = nn.Linear(self.CFG.hidden_dim, self.CFG.hidden_dim, bias = False) 
-        self.VLinear = nn.Linear(self.CFG.hidden_dim, self.CFG.hidden_dim, bias = False) 
-        self.OutLinear = nn.Linear(self.CFG.hidden_dim, self.CFG.hidden_dim, bias = False) 
+        self.QLinear = nn.Linear(self.CFG.d_model, self.CFG.d_model, bias = False)
+        self.KLinear = nn.Linear(self.CFG.d_model, self.CFG.d_model, bias = False) 
+        self.VLinear = nn.Linear(self.CFG.d_model, self.CFG.d_model, bias = False) 
+        self.OutLinear = nn.Linear(self.CFG.d_model, self.CFG.d_model, bias = False) 
         self.softmax = nn.Softmax(dim = -1)
         self.relu = nn.ReLU()
 
-        self.forward1 = nn.Linear(self.CFG.hidden_dim, self.CFG.hidden_dim, bias = False) 
-        self.forward2 = nn.Linear(self.CFG.hidden_dim, self.CFG.hidden_dim, bias = False) 
+        self.forward1 = nn.Linear(self.CFG.d_model, self.CFG.d_model, bias = False) 
+        self.forward2 = nn.Linear(self.CFG.d_model, self.CFG.d_model, bias = False) 
 
-        self.layer_norm1 = nn.LayerNorm(self.CFG.hidden_dim)
+        self.layer_norm1 = nn.LayerNorm(self.CFG.d_model)
         self.dropout = nn.Dropout(self.CFG.dropout)
-        self.layer_norm2 = nn.LayerNorm(self.CFG.hidden_dim)
+        self.layer_norm2 = nn.LayerNorm(self.CFG.d_model)
 
     def forward(self, x, graph):
         Q = self.dropout(self.QLinear(x))
@@ -94,7 +94,7 @@ class A_GCN(nn.Module): # TODO: double check with attention is all you need
         V = self.dropout(self.VLinear(x))
 
         attention_out_list = []
-        for j in range(self.CFG.attention_heads):
+        for j in range(self.CFG.n_heads):
 
             Q_tmp = Q[:, j*self.dim_per_head:(j+1)*self.dim_per_head]
             K_tmp = K[:, j*self.dim_per_head:(j+1)*self.dim_per_head]

@@ -1,4 +1,4 @@
-from environment import *
+from model.model_class.environment import *
 
 class GraphRegressionModel(object):
     """ Model Template for Classification """
@@ -12,8 +12,6 @@ class GraphRegressionModel(object):
         self.configs = configs
         self.name = self.configs.name 
         self.model = self.Model(self.configs) # create the model
-        
-        self.n_unique_tokens = self.configs.n_unique_tokens # size of embedding
 
         # operations
             # set seed - control randomness
@@ -23,8 +21,6 @@ class GraphRegressionModel(object):
         self.optimizer = AdamW(self.model.parameters(), lr=self.configs.lr)
         self.criterion = self.configs.loss
         self.validation_criterion = self.configs.validation_loss
-        self.pretrain_criterion = self.configs.pretrain_loss
-        self.pretrain_validation_criterion = self.configs.pretrain_validation_loss
 
         # automatically detect GPU device if avilable
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
