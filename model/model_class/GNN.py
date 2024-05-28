@@ -32,8 +32,10 @@ class GNN(GraphRegressionModel):
                                             )
                                             for _ in range(self.CFG.n_gnn_layers)])
         
+            if self.CFG.bottleneck:
+                self.bottleneck = GraphBottleNeckLayer(self.CFG)
 
-            self.linear = GraphOutputLayer(self.CFG)
+            self.linear = OutputLayer(self.CFG)
         
         
         def forward(self, x_spatial, x_nonspatial, graph):
@@ -44,6 +46,9 @@ class GNN(GraphRegressionModel):
                 x_spatial = layer[0](x_spatial, graph)  # Call GCN/A_GCN layer with graph argument
                 x_spatial = layer[1](x_spatial)         # Apply Dropout
                 x_spatial = layer[2](x_spatial)         # Apply ReLU
+
+            if self.CFG.bottleneck:
+                x_spatial = self.bottleneck(x_spatial)
 
             x_combined = torch.cat((x_spatial, x_nonspatial), dim=-1) # TODO: make x_spatial down to 1 dim?
             out = self.linear(x_combined)
@@ -137,15 +142,26 @@ class GraphInputLayer(nn.Module):
     def forward(self, x):
         return self.input(x)
     
-class GraphOutputLayer(nn.Module):
+class OutputLayer(nn.Module):
     def __init__(self, CFG):
         super().__init__()
         self.CFG = CFG
 
         torch.manual_seed(self.CFG.random_state)
         self.output = nn.Sequential(
-            nn.Linear(self.CFG.d_model + self.CFG.nonspatial_input_dim, 1),
+            nn.Linear(1 + self.CFG.nonspatial_input_dim if self.CFG.bottleneck else self.CFG.d_model + self.CFG.nonspatial_input_dim, 1),
         )
 
     def forward(self, x):
         return self.output(x)
+    
+class GraphBottleNeckLayer(nn.Module):
+    def __init__(self, CFG):
+        super().__init__()
+        self.CFG = CFG
+
+        torch.manual_seed(self.CFG.random_state)
+        self.linear = nn.Linear(self.CFG.d_model, 1, bias = True)
+    
+    def forward(self, x):
+        return self.linear(x)
