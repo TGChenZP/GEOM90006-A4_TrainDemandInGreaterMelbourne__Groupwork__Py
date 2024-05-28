@@ -12,10 +12,10 @@ class GNN(GraphRegressionModel):
 
             # graph input layer
             self.input = GraphInputLayer(self.CFG)
-            
+
             # gcn/agcn
             if self.CFG.n_heads == 0:
-                self.gcn  = nn.Sequential(*[
+                self.gcn  = nn.ModuleList([
                                             nn.Sequential(
                                                 GCN(self.CFG), 
                                                 nn.Dropout(),
@@ -24,15 +24,15 @@ class GNN(GraphRegressionModel):
                                             for _ in range(self.CFG.n_gnn_layers)
                                         ])
             else:
-                self.gcn  = nn.Sequential(*[
+                self.gcn  = nn.ModuleList([
                                             nn.Sequential(
                                                 A_GCN(self.CFG), 
                                                 nn.Dropout(),
                                                 nn.ReLU()
                                             )
                                             for _ in range(self.CFG.n_gnn_layers)])
-            
-            
+        
+
             self.linear = GraphOutputLayer(self.CFG)
         
         
@@ -41,7 +41,9 @@ class GNN(GraphRegressionModel):
             x_spatial = self.input(x_spatial)
 
             for layer in self.gcn:
-                x_spatial = layer(x_spatial, graph)
+                x_spatial = layer[0](x_spatial, graph)  # Call GCN/A_GCN layer with graph argument
+                x_spatial = layer[1](x_spatial)         # Apply Dropout
+                x_spatial = layer[2](x_spatial)         # Apply ReLU
 
             x_combined = torch.cat((x_spatial, x_nonspatial), dim=-1) # TODO: make x_spatial down to 1 dim?
             out = self.linear(x_combined)
@@ -127,7 +129,7 @@ class GraphInputLayer(nn.Module):
 
         torch.manual_seed(self.CFG.random_state)
         self.input = nn.Sequential(
-            nn.Linear(self.CFG.spatial_input_dim, self.CFG.hidden_size),
+            nn.Linear(self.CFG.spatial_input_dim, self.CFG.d_model),
             nn.ReLU(),
             nn.Dropout(self.CFG.dropout)
         )
@@ -142,7 +144,7 @@ class GraphOutputLayer(nn.Module):
 
         torch.manual_seed(self.CFG.random_state)
         self.output = nn.Sequential(
-            nn.Linear(self.CFG.hidden_size + self.CFG.nonspatial_input_dim, 1),
+            nn.Linear(self.CFG.d_model + self.CFG.nonspatial_input_dim, 1),
         )
 
     def forward(self, x):

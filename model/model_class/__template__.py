@@ -59,13 +59,14 @@ class GraphRegressionModel(object):
         # get a list of random seeds, using our original random seed
         np.random.seed(self.configs.random_state) 
         seeds = [np.random.randint(0, 1000000) for _ in range(self.configs.epochs)]
-
-        GRAPH = torch.FloatTensor(graph).to_self.device()
+        
+        GRAPH = torch.FloatTensor(graph).to(self.device)
 
         # min_loss = np.inf
-        max_r2 = 0
+        max_r2 = -np.inf
         best_epoch = 0
         for epoch in range(self.configs.epochs):
+
 
             if not patience: # end training when no more patience
                 break
@@ -84,7 +85,8 @@ class GraphRegressionModel(object):
 
             n_batch = 0
 
-            for mini_batch_number in tqdm():
+            for mini_batch_number in tqdm(range(len(total_train_X_spatial))):
+
  
                 # make this mini batch into a tensor, and move to GPU
                 geospatial_X, non_geospatial_X, y, mask = torch.FloatTensor(total_train_X_spatial[mini_batch_number]).to(self.device), \
@@ -160,7 +162,7 @@ class GraphRegressionModel(object):
 
         with torch.no_grad():
 
-            for mini_batch_number in tqdm():
+            for mini_batch_number in tqdm(range(len(future_X_spatial))):
  
                 # make this mini batch into a tensor, and move to GPU
                 geospatial_X, non_geospatial_X, mask = torch.FloatTensor(future_X_spatial[mini_batch_number]).to(self.device), \
@@ -182,7 +184,9 @@ class GraphRegressionModel(object):
         # get the prediction
         pred_val_y = self.predict(total_val_X_spatial, total_val_X_nonspatial, val_masks, graph)
 
-        val_y = np.array(total_val_y)
+        val_y = []
+        for i in range(len(total_val_y)):
+            val_y.extend(total_val_y[i][val_masks[i].astype(bool)])
 
             # get the tensor version of the prediction and true logits
         pred_val_y_tensor = torch.FloatTensor(np.array(pred_val_y)).to(self.device)
@@ -195,7 +199,7 @@ class GraphRegressionModel(object):
 
         epoch_loss = self.criterion(pred_val_y_tensor, val_y_tensor)
 
-        record = f'''Epoch {epoch+1} Train | Loss: {epoch_loss:>7.4f} | R2: {epoch_r2:>7.4f}| MSE: {epoch_mse:>7.4f} | RMSE: {epoch_rmse:>7.4f} | MAE: {epoch_mae:>7.4f} '''
+        record = f'''Epoch {epoch+1} Val | Loss: {epoch_loss:>7.4f} | R2: {epoch_r2:>7.4f}| MSE: {epoch_mse:>7.4f} | RMSE: {epoch_rmse:>7.4f} | MAE: {epoch_mae:>7.4f} '''
 
         print(record)
 
