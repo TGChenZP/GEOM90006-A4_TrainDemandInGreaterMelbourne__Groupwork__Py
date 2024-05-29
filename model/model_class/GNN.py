@@ -107,19 +107,19 @@ class A_GCN(nn.Module): # TODO: double check with attention is all you need
             K_tmp = K[:, j*self.dim_per_head:(j+1)*self.dim_per_head]
             V_tmp = V[:, j*self.dim_per_head:(j+1)*self.dim_per_head]
 
-            attention_out_tmp = self.softmax((Q_tmp @ torch.transpose(K_tmp, 0, 1)) * graph / np.sqrt(self.dim_per_head)) @ V_tmp
+            attention_out_tmp = self.dropout(self.softmax((Q_tmp @ torch.transpose(K_tmp, 0, 1)) * graph / np.sqrt(self.dim_per_head))) @ V_tmp
 
             attention_out_list.append(attention_out_tmp)
 
-        out = self.dropout(self.relu(torch.cat(attention_out_list, dim = 1)))
+        out = torch.cat(attention_out_list, dim = 1)
 
-        attention_out = self.dropout(self.OutLinear(out))
+        attention_out = self.dropout(out)
 
         x_add_attention = x + attention_out
 
         x_add_attention_normalised = self.layer_norm1(x_add_attention)
 
-        forward_output = self.forward2(self.dropout(self.relu(self.forward1(x_add_attention_normalised))))
+        forward_output = self.dropout(self.forward2(self.relu(self.forward1(x_add_attention_normalised))))
 
         x_add_forward = forward_output + x_add_attention
 
