@@ -1,0 +1,16 @@
+pandas
+numpy
+matplotlib
+scipy
+shapely
+geopandas
+scikit-learn
+torch
+contextily
+seaborn
+rasterio
+pointspats
+skgstat
+statsmodels
+xgboost
+lightgbm
