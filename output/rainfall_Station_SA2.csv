@@ -1,0 +1,443 @@
+SA2_NAME21,mean_rainfall_value,Station_Na
+Brunswick East,651.9298502604166,
+Brunswick West,634.38720703125,
+Pascoe Vale South,636.2942504882812,
+Brunswick - North,646.8382975260416,Anstey
+Brunswick - South,639.805419921875,Jewell
+Brunswick - South,639.805419921875,Brunswick
+Coburg - East,656.1773681640625,
+Coburg - West,646.317626953125,Coburg
+Coburg - West,646.317626953125,Moreland
+Alphington - Fairfield,680.173828125,Fairfield
+Alphington - Fairfield,680.173828125,Alphington
+Thornbury,672.771728515625,Thornbury
+Northcote - East,665.233154296875,Dennis
+Northcote - East,665.233154296875,Westgarth
+Northcote - West,655.264404296875,Northcote
+Northcote - West,655.264404296875,Croxton
+Northcote - West,655.264404296875,Merri
+Ascot Vale,615.516357421875,Ascot Vale
+Flemington,618.602294921875,Newmarket
+Moonee Ponds,621.6565755208334,Moonee Ponds
+Essendon (West) - Aberfeldie,612.2252604166666,
+Essendon - East,624.035791015625,Essendon
+Essendon - East,624.035791015625,Strathmore
+Essendon - East,624.035791015625,Glenbervie
+Carlton,632.5444946289062,
+Docklands,622.92919921875,Southern Cross
+East Melbourne,639.4720458984375,Jolimont
+Flemington Racecourse,608.15087890625,Showgrounds
+Flemington Racecourse,608.15087890625,Flemington Racecourse
+Kensington (Vic.),615.4937133789062,Kensington
+Parkville,630.1128743489584,Royal Park
+South Yarra - West,709.3754299676326,
+West Melbourne - Industrial,612.3216145833334,North Melbourne
+West Melbourne - Industrial,612.3216145833334,South Kensington
+Melbourne CBD - East,630.9925537109375,Parliament
+Melbourne CBD - North,709.3754299676326,Melbourne Central
+Melbourne CBD - West,709.3754299676326,Flinders Street
+Melbourne CBD - West,709.3754299676326,Flagstaff
+North Melbourne,623.9451904296875,Macaulay
+North Melbourne,623.9451904296875,Flemington Bridge
+Royal Botanic Gardens Victoria,637.7884521484375,
+Southbank (West) - South Wharf,631.0648193359375,
+Southbank - East,631.1060791015625,
+West Melbourne - Residential,625.763427734375,
+Albert Park,631.1173095703125,
+Elwood,651.572021484375,
+Port Melbourne,619.3552856445312,
+St Kilda East,655.8694458007812,Balaclava
+St Kilda East,655.8694458007812,Ripponlea
+Port Melbourne Industrial,620.789306640625,
+South Melbourne,709.3754299676326,
+St Kilda - Central,648.9931640625,
+St Kilda - West,642.2701009114584,
+Armadale,665.8463745117188,Armadale
+Armadale,665.8463745117188,Toorak
+Prahran - Windsor,654.989501953125,Prahran
+Prahran - Windsor,654.989501953125,Windsor
+Toorak,662.08203125,Heyington
+South Yarra - North,648.9497680664062,South Yarra
+South Yarra - South,645.9349975585938,Hawksburn
+Abbotsford,644.7006225585938,Victoria Park
+Abbotsford,644.7006225585938,Collingwood
+Carlton North - Princes Hill,638.1809692382812,
+Collingwood,640.0297241210938,
+Fitzroy,637.1343994140625,
+Fitzroy North,645.6651611328125,Rushall
+Clifton Hill - Alphington,659.8424944196429,Clifton Hill
+Richmond (South) - Cremorne,655.94033203125,Richmond
+Richmond (South) - Cremorne,655.94033203125,Burnley
+Richmond (South) - Cremorne,655.94033203125,East Richmond
+Richmond - North,651.3629760742188,North Richmond
+Richmond - North,651.3629760742188,West Richmond
+Ashburton (Vic.),724.439453125,Ashburton
+Ashburton (Vic.),724.439453125,Alamein
+Balwyn,734.7906494140625,
+Balwyn North,723.5494995117188,
+Camberwell,714.006884765625,Camberwell
+Camberwell,714.006884765625,Riversdale
+Camberwell,714.006884765625,East Camberwell
+Camberwell,714.006884765625,Hartwell
+Camberwell,714.006884765625,Willison
+Glen Iris - East,718.4461495535714,Burwood
+Hawthorn East,683.9801025390625,Auburn
+Kew East,694.39453125,
+Surrey Hills (West) - Canterbury,729.7111328125,Union
+Surrey Hills (West) - Canterbury,729.7111328125,Surrey Hills
+Surrey Hills (West) - Canterbury,729.7111328125,Canterbury
+Surrey Hills (West) - Canterbury,729.7111328125,Chatham
+Hawthorn - North,672.358154296875,Hawthorn
+Hawthorn - South,671.7574462890625,Glenferrie
+Kew - South,686.938671875,
+Kew - West,667.5865885416666,
+Bulleen,708.2336774553571,
+Doncaster,748.4269205729166,
+Templestowe,745.5405883789062,
+Templestowe Lower,717.351318359375,
+Doncaster East - North,775.8489118303571,
+Doncaster East - South,772.44765625,
+Blackburn,784.4732840401786,Blackburn
+Blackburn,784.4732840401786,Laburnum
+Blackburn South,794.821044921875,
+Box Hill,774.1939697265625,Box Hill
+Box Hill North,763.899169921875,
+Burwood (Vic.),769.7221069335938,
+Burwood East,802.7582397460938,
+Surrey Hills (East) - Mont Albert,761.5628051757812,Mont Albert
+Beaumaris,698.412353515625,
+Brighton (Vic.),655.7053571428571,North Brighton
+Brighton (Vic.),655.7053571428571,Middle Brighton
+Brighton (Vic.),655.7053571428571,Brighton Beach
+Brighton (Vic.),655.7053571428571,Gardenvale
+Brighton East,673.4771902901786,
+Highett (West) - Cheltenham,697.9332682291666,Cheltenham
+Highett (West) - Cheltenham,697.9332682291666,Highett
+Hampton,692.8958740234375,Hampton
+Sandringham - Black Rock,698.0438842773438,Sandringham
+Bentleigh - McKinnon,691.871533203125,Bentleigh
+Bentleigh - McKinnon,691.871533203125,Mckinnon
+Bentleigh - McKinnon,691.871533203125,Patterson
+Carnegie,703.7222493489584,Carnegie
+Caulfield - North,672.5888671875,Caulfield
+Caulfield - South,676.146484375,
+Elsternwick,660.7173665364584,Elsternwick
+Hughesdale,725.6624755859375,Hughesdale
+Murrumbeena,714.3289794921875,Murrumbeena
+Ormond - Glen Huntly,693.4620971679688,Glenhuntly
+Ormond - Glen Huntly,693.4620971679688,Ormond
+Bentleigh East - North,713.736279296875,
+Bentleigh East - South,707.246826171875,
+Aspendale Gardens - Waterways,710.8939208984375,
+Braeside,710.4945678710938,
+Carrum - Patterson Lakes,717.3545532226562,Carrum
+Chelsea - Bonbeach,715.3550618489584,Chelsea
+Chelsea - Bonbeach,715.3550618489584,Bonbeach
+Chelsea Heights,713.61083984375,
+Highett (East) - Cheltenham,705.0601806640625,Southland
+Edithvale - Aspendale,701.14599609375,Edithvale
+Edithvale - Aspendale,701.14599609375,Aspendale
+Mentone,704.8594970703125,Mentone
+Moorabbin - Heatherton,713.4123347355769,Moorabbin
+Moorabbin Airport,711.1627807617188,
+Mordialloc - Parkdale,702.7000325520834,Mordialloc
+Mordialloc - Parkdale,702.7000325520834,Parkdale
+Malvern - Glen Iris,674.0583844866071,Malvern
+Malvern - Glen Iris,674.0583844866071,Tooronga
+Malvern - Glen Iris,674.0583844866071,Gardiner
+Malvern - Glen Iris,674.0583844866071,Glen Iris
+Malvern - Glen Iris,674.0583844866071,Kooyong
+Malvern East,712.8993530273438,Holmesglen
+Malvern East,712.8993530273438,East Malvern
+Malvern East,712.8993530273438,Darling
+Bundoora - East,702.813671875,
+Greensborough,702.7433860085227,Greensborough
+Heidelberg - Rosanna,696.7383510044643,Heidelberg
+Heidelberg - Rosanna,696.7383510044643,Rosanna
+Heidelberg West,699.8875558035714,
+Ivanhoe,693.687890625,Ivanhoe
+Ivanhoe,693.687890625,Darebin
+Ivanhoe East - Eaglemont,700.9371337890625,Eaglemont
+Montmorency - Briar Hill,702.421630859375,Montmorency
+Viewbank - Yallambie,692.9356011284722,Macleod
+Watsonia,697.4896240234375,Watsonia
+Kingsbury,701.0004340277778,
+Preston - East,679.1763916015625,Preston
+Preston - East,679.1763916015625,Bell
+Preston - West,666.0205891927084,
+Reservoir - North East,684.223583984375,Ruthven
+Reservoir - North West,667.608935546875,
+Reservoir - South East,688.1159057617188,
+Reservoir - South West,667.451220703125,Reservoir
+Reservoir - South West,667.451220703125,Regent
+Eltham,733.5806826636905,Eltham
+Hurstbridge,764.1927490234375,Hurstbridge
+Kinglake,1185.2572408536585,
+Panton Hill - St Andrews,868.2299497377622,
+Plenty - Yarrambat,725.5492466517857,
+Research - North Warrandyte,801.5819546568628,
+Wattle Glen - Diamond Creek,749.6061422413793,Diamond Creek
+Wattle Glen - Diamond Creek,749.6061422413793,Wattle Glen
+Bundoora - North,701.9931640625,
+Bundoora - West,703.7152099609375,
+Mill Park - North,702.939111328125,South Morang
+Mill Park - South,701.5703938802084,
+Thomastown,680.5334635416667,Thomastown
+Thomastown,680.5334635416667,Keon Park
+Wallan,841.0998263888889,
+Whittlesea,800.6039219798657,
+Epping - East,691.1509486607143,
+Epping - South,671.0598493303571,Epping
+Epping (Vic.) - West,677.6498480902778,
+South Morang - North,706.632568359375,Hawkstowe
+South Morang - South,709.5074869791666,Middle Gorge
+Wollert,680.5455228365385,
+Doreen - North,721.398388671875,
+Doreen - South,718.11435546875,
+Lalor - East,688.5638427734375,
+Lalor - West,668.8264382102273,Lalor
+Mernda - North,705.966064453125,
+Mernda - South,701.2546997070312,Mernda
+Airport West,600.2930908203125,
+Essendon Airport,614.093994140625,
+Keilor,579.4564887152778,
+Niddrie - Essendon West,603.3600260416666,
+Strathmore,618.7496337890625,
+Avondale Heights,585.1756591796875,
+Keilor East,587.643310546875,
+Gisborne,764.3897488317757,
+Macedon,869.3870933219179,
+Riddells Creek,761.9776105182926,
+Romsey,751.875,
+Coburg North,652.381591796875,Merlynston
+Coburg North,652.381591796875,Batman
+Fawkner,653.8959350585938,Gowrie
+Gowanbrae,610.60888671875,
+Hadfield,640.2465006510416,Fawkner
+Glenroy - East,634.3035278320312,
+Glenroy - West,615.4222819010416,Glenroy
+Glenroy - West,615.4222819010416,Jacana
+Oak Park,621.6629638671875,Pascoe Vale
+Oak Park,621.6629638671875,Oak Park
+Pascoe Vale,635.3907470703125,
+Sunbury,606.8892320736434,
+Diggers Rest,588.6137890625,Diggers Rest
+Sunbury - South,583.5448266006098,Sunbury
+Sunbury - West,661.3715160472973,
+Broadmeadows,631.01708984375,Broadmeadows
+Campbellfield - Coolaroo,650.1642252604166,Upfield
+Campbellfield - Coolaroo,650.1642252604166,Coolaroo
+Gladstone Park - Westmeadows,611.3526041666667,
+Greenvale - Bulla,598.4889588647959,
+Meadow Heights,632.75517578125,
+Melbourne Airport,587.1147135416667,
+Tullamarine,599.0732421875,
+Craigieburn - Central,646.89296875,
+Craigieburn - North,647.5072115384615,
+Craigieburn - South,644.0128728693181,Craigieburn
+Mickleham - Yuroke,626.9181338028169,
+Craigieburn - North West,638.888916015625,
+Craigieburn - West,641.737255859375,
+Roxburgh Park (South) - Somerton,646.71884765625,Roxburgh Park
+Roxburgh Park - North,643.7636311848959,
+Bayswater,893.1007080078125,Bayswater
+Knoxfield - Scoresby,812.9021809895834,
+Lysterfield,862.4298828125,
+Rowville - Central,821.1654296875,
+Rowville - North,831.779296875,
+Rowville - South,822.1085205078125,
+Wantirna,841.8904622395834,
+Wantirna South,820.4717494419643,
+Boronia,931.0735677083334,Boronia
+Ferntree Gully - North,899.5587158203125,Ferntree Gully
+Ferntree Gully (South) - Upper Ferntree Gully,881.2515980113636,Upper Ferntree Gully
+The Basin,1024.7853190104167,
+Donvale - Park Orchards,808.64091796875,
+Warrandyte - Wonga Park,816.8297872340426,
+Bayswater North,933.0282118055555,
+Croydon Hills - Warranwood,848.7263997395834,
+Ringwood,845.3775745738636,Ringwood
+Ringwood East,868.2883029513889,Ringwood East
+Ringwood East,868.2883029513889,Heathmont
+Ringwood North,834.19873046875,
+Croydon - East,905.9992947048611,Croydon
+Croydon - West,875.1464146205357,
+Croydon South,906.29931640625,
+Forest Hill,808.432666015625,
+Mitcham (Vic.),811.464599609375,Mitcham
+Mitcham (Vic.),811.464599609375,Heatherdale
+Nunawading,796.3787434895834,Nunawading
+Vermont,821.0498046875,
+Vermont South,815.05224609375,
+Belgrave - Selby,991.75234375,Belgrave
+Chirnside Park,862.9536830357143,
+Healesville - Yarra Glen,1124.9237637362637,
+Kilsyth,967.3392740885416,
+Lilydale - Coldstream,901.0520833333334,Lilydale
+Monbulk - Silvan,1102.7180606617646,
+Montrose,1014.7295809659091,
+Mooroolbark,922.8308454241071,Mooroolbark
+Mount Dandenong - Olinda,1120.281049679487,
+Mount Evelyn,1012.2387408088235,
+Upwey - Tecoma,1030.1673177083333,Upwey
+Upwey - Tecoma,1030.1673177083333,Tecoma
+Wandin - Seville,1002.1534598214286,
+Yarra Valley,1323.3247096994535,
+Emerald - Cockatoo,1103.3404737903227,
+Beaconsfield - Officer,900.6200022977941,Beaconsfield
+Beaconsfield - Officer,900.6200022977941,Officer
+Bunyip - Garfield,944.4514462809917,
+Koo Wee Rup,851.441301703163,
+Pakenham - North East,936.2029296875,
+Pakenham - North West,945.929453125,
+Pakenham - South East,868.1530997983871,Pakenham
+Pakenham - South West,857.4754464285714,Cardinia Road
+Berwick - North,886.4186197916666,Berwick
+Doveton,784.4646484375,
+Hallam,785.148193359375,Hallam
+Narre Warren North,891.8497242647059,
+Endeavour Hills - North,824.4930338541667,
+Endeavour Hills - South,801.491650390625,
+Narre Warren - North East,821.0799967447916,
+Narre Warren - South West,806.34287109375,Narre Warren
+Berwick - South East,841.0762329101562,
+Berwick - South West,827.1693522135416,
+Cranbourne,795.8299386160714,Cranbourne
+Cranbourne South,793.8090701219512,
+Cranbourne West,783.75390625,
+Lynbrook - Lyndhurst,772.2144949776786,Merinda Park
+Lynbrook - Lyndhurst,772.2144949776786,Lynbrook
+Pearcedale - Tooradin,778.1524754213483,
+Narre Warren South - East,804.9034598214286,
+Narre Warren South - West,789.0713704427084,
+Clyde North - North,823.123046875,
+Clyde North - South,809.2835629111842,
+Cranbourne East - North,805.8559126420455,
+Cranbourne East - South,801.8309326171875,
+Cranbourne North - East,809.49052734375,
+Cranbourne North - West,787.390625,
+Hampton Park - East,780.995849609375,
+Hampton Park - West,776.741748046875,
+Clarinda - Oakleigh South,727.5988159179688,
+Clayton South,744.0973307291666,Westall
+Dandenong North,803.6298828125,
+Dingley Village,725.742431640625,
+Noble Park North,791.3787434895834,
+Springvale,766.1489701704545,Springvale
+Springvale South,740.2462158203125,
+Noble Park - East,770.9777018229166,Sandown Park
+Noble Park - West,757.464111328125,Noble Park
+Noble Park - West,757.464111328125,Yarraman
+Dandenong - North,776.033203125,Dandenong
+Dandenong - South,746.0794034090909,
+Keysborough - North,739.9803292410714,
+Keysborough - South,722.7639973958334,
+Ashwood - Chadstone,759.236328125,
+Glen Waverley - East,800.26630859375,
+Glen Waverley - West,799.90703125,Glen Waverley
+Glen Waverley - West,799.90703125,Syndal
+Mount Waverley - North,787.1881975446429,Mount Waverley
+Mount Waverley - North,787.1881975446429,Jordanville
+Mount Waverley - South,778.8356711647727,
+Mulgrave,786.9760298295455,
+Oakleigh - Huntingdale,744.1418678977273,Oakleigh
+Oakleigh - Huntingdale,744.1418678977273,Huntingdale
+Wheelers Hill,788.9295247395834,
+Clayton (North) - Notting Hill,777.3478190104166,
+Clayton - Central,755.8018391927084,Clayton
+Ardeer - Albion,572.8165690104166,Albion
+Cairnlea,568.9491780598959,
+Delahey,567.8147786458334,
+Keilor Downs,571.7190551757812,
+Kings Park (Vic.),564.6796875,
+St Albans - North,571.09970703125,Keilor Plains
+St Albans - South,571.5596400669643,St Albans
+St Albans - South,571.5596400669643,Ginifer
+Sunshine,580.348291015625,Sunshine
+Sunshine North,574.983154296875,
+Sunshine West,576.5505777994791,
+Sydenham,568.35009765625,
+Taylors Lakes,569.2607421875,Watergardens
+Deer Park,562.5255737304688,
+Derrimut,563.7127403846154,
+Altona,569.1626263786765,Altona
+Altona,569.1626263786765,Westona
+Altona,569.1626263786765,Seaholme
+Altona Meadows,560.6390380859375,
+Altona North,577.6131727430555,
+Newport,586.36279296875,Newport
+Newport,586.36279296875,North Williamstown
+Newport,586.36279296875,Spotswood
+Seabrook,553.100341796875,
+Williamstown,581.6373291015625,Williamstown Beach
+Williamstown,581.6373291015625,Williamstown
+Braybrook,586.0738932291666,
+Footscray,600.309326171875,Footscray
+Footscray,600.309326171875,Middle Footscray
+Maribyrnong,599.8671177455357,
+Seddon - Kingsville,595.3040161132812,Seddon
+West Footscray - Tottenham,590.6622924804688,West Footscray
+West Footscray - Tottenham,590.6622924804688,Tottenham
+Yarraville,593.145703125,Yarraville
+Bacchus Marsh,546.4387755102041,
+Melton West,512.6683349609375,
+Rockbank - Mount Cottrell,537.7199006782946,
+Taylors Hill,565.0193359375,
+Burnside,558.3328857421875,
+Burnside Heights,563.30859375,
+Caroline Springs,557.4867117745536,
+Brookfield,497.968896484375,
+Cobblebank - Strathtulloh,514.8045847039474,
+Eynesbury - Exford,511.2792677238806,
+Fraser Rise - Plumpton,542.5194986979167,
+Hillside,563.0196533203125,
+Kurunjang - Toolern Vale,585.1684170081967,
+Melton,512.2583984375,
+Melton South - Weir Views,506.0400390625,
+Hoppers Crossing - North,535.5334284855769,Hoppers Crossing
+Hoppers Crossing - South,534.022509765625,
+Laverton,559.0569069602273,Williams Landing
+Laverton,559.0569069602273,Laverton
+Laverton,559.0569069602273,Aircraft
+Werribee - South,533.4754217367257,Werribee
+Point Cook - East,558.8970269097222,
+Point Cook - South,548.5809326171875,
+Werribee - East,529.6387803819445,
+Werribee - West,519.9873511904761,
+Manor Lakes - Quandong,522.9359809027778,
+Point Cook - North East,549.1408342633929,
+Point Cook - North West,544.6409912109375,
+Tarneit (West) - Mount Cottrell,521.8886160714286,
+Tarneit - Central,531.1702880859375,
+Tarneit - North,534.6830444335938,
+Tarneit - South,526.5850016276041,
+Truganina - North,547.3156127929688,
+Truganina - South East,547.2904052734375,
+Truganina - South West,540.73876953125,
+Wyndham Vale - North,521.4481670673077,
+Wyndham Vale - South,521.3291015625,
+Carrum Downs,742.25322265625,
+Frankston,770.4579190340909,Frankston
+Frankston,770.4579190340909,Leawarra
+Frankston North,758.99755859375,
+Frankston South,776.5920632102273,
+Langwarrin,777.3748372395834,
+Seaford (Vic.),728.7398587740385,Seaford
+Seaford (Vic.),728.7398587740385,Kananook
+Skye - Sandhurst,769.3401988636364,
+Dromana,847.5845246010638,
+Flinders,836.616945251938,
+Hastings - Somers,794.7801724137931,Crib Point
+Hastings - Somers,794.7801724137931,Hastings
+Hastings - Somers,794.7801724137931,Stony Point
+Hastings - Somers,794.7801724137931,Bittern
+Hastings - Somers,794.7801724137931,Morradoo
+Mount Eliza,770.5888671875,
+Mount Martha,769.8680889423077,
+Point Nepean,723.7779651988636,
+Rosebud - McCrae,837.8614783653846,
+Somerville,785.1252190420561,Somerville
+Somerville,785.1252190420561,Tyabb
+Somerville,785.1252190420561,Baxter
+Mornington - East,760.1632952008929,
+Mornington - West,740.7513020833334,
